@@ -14,7 +14,28 @@ module.exports = function (passport) {
         callbackURL: "/auth/google/callback",
       },
       async (accessToken, refreshToken, profile, done) => {
-        console.log(profile);
+        // when we get the data from google'user (like name familyName photo..)
+        const newUser = {
+          googleId: profile.id,
+          displayName: profile.displayName,
+          firstName: profile.name.givenName,
+          lastName: profile.name.familyName,
+          image: profile.photos[0].value,
+        };
+
+        try {
+          // try to store the user  findOne in User(model) to see if that user exists
+          let user = await User.findOne({ googleId: profile.id });
+          // if user exists in our model <\> else we create a new one
+          if (user) {
+            done(null, user);
+          } else {
+            user = await User.create(newUser);
+            done(null, user);
+          }
+        } catch (err) {
+          console.error(err);
+        }
       }
     )
   );
