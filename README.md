@@ -19,3 +19,7 @@ App to create public and private stories using MongoDB Express Node GoogleOauth
 > passport: for authentication
 
 - npm i -D nodemon cross-env
+
+### Google Oauth :
+
+google cloud console > g++ api > identifiants > create ID client Oauth > set redirection URI
