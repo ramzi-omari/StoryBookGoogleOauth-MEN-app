@@ -14,7 +14,7 @@ App to create public and private stories using MongoDB Express Node GoogleOauth
 
 > moment: to format date
 
-> morgan: for loggin
+> morgan: for loggin (to follow request in terminal)
 
 > passport: for authentication
 
