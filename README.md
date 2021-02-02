@@ -22,7 +22,7 @@ App to create public and private stories using MongoDB Express Node GoogleOauth
 
 ### Google Oauth :
 
-google cloud console > g++ api > identifiants > create ID client Oauth > set redirection URI
+google cloud console > g++ api > identifiants(credentials) > create ID client Oauth > set redirection URI
 
 ### Passport js
 
