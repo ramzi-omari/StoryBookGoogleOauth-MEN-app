@@ -1,6 +1,8 @@
+// here we create the strategy which is google
+
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const mongoose = require("mongoose");
-const User = require("../models/User");
+const User = require("./models/User");
 
 // we catch passport passed in app.js
 module.exports = function (passport) {

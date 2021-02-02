@@ -27,3 +27,4 @@ google cloud console > g++ api > identifiants(credentials) > create ID client Oa
 ### Passport js
 
 > steps in http://www.passportjs.org/
+> comments in passport.js & auth.js to create routes & authentication 'google' strategy
