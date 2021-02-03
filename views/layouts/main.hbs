@@ -25,9 +25,13 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    {{!-- materialize: initialize side navigation bar --}}
+
     <script>
+        // materialize: initialize side navigation bar 
         M.Sidenav.init(document.querySelector('.sidenav'))
+        //to show select list(linked by id #status)
+        M.FormSelect.init(document.querySelector('#status'))
+
     </script>
 </body>
 

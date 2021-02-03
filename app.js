@@ -50,6 +50,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", require("./routes/index"));
 // route to authentication
 app.use("/auth", require("./routes/auth"));
+// story route
+app.use("/stories", require("./routes/stories"));
 
 const PORT = process.env.PORT || 3000;
 
